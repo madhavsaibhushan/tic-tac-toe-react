@@ -5,6 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { MainwrapperComponent } from '../mainwrapper/mainwrapper.component';
+import { Admob } from '@ionic-native/admob/ngx';
+// import { Admob } from '@ionic-native/admob';
 
 
 @NgModule({
@@ -12,8 +15,12 @@ import { HomePageRoutingModule } from './home-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
   ],
-  declarations: [HomePage]
+  providers:[Admob],
+  declarations: [HomePage,
+    MainwrapperComponent
+  ]
+  
 })
 export class HomePageModule {}

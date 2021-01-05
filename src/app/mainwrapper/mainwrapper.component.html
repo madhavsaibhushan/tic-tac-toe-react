@@ -1,0 +1,17 @@
+
+<!-- test -->
+
+<div class="cardsContainer" *ngIf='!whoWins else wins'>
+  <div *ngFor="let single of arrayofCards; index as index" class="individualCard" (click)='onCardClick(index)'>
+  <p [ngClass]="{'x':single==='X','o':single==='O'}">
+    {{single}} 
+  </p>
+  </div>
+  
+</div>
+<ng-template #wins>
+<h5 class="winner">
+  {{whoWins}}
+</h5>
+</ng-template>
+<button class="restart" (click)="restart()">Restart</button>
