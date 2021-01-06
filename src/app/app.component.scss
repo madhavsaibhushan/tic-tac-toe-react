@@ -1,0 +1,7 @@
+@import '../theme/variables.scss';
+body{
+    background-color: #354f62 !important;
+}
+ion-content{
+    background-color:var(--ion-background-color);
+}

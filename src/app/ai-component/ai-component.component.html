@@ -1,0 +1,35 @@
+<div class="cardsContainer" *ngIf='!whoWins '>
+  <div *ngFor="let single of arrayofCards; index as index" class="individualCard" (click)='onCardClick(index)'>
+    <p [ngClass]="{'x':single==='X','o':single==='O'}">
+      {{single}}
+    </p>
+  </div>
+
+</div>
+<div #wins>
+  <!-- <h5 class="winner">
+  {{whoWins}}
+</h5> -->
+
+  <div class="countofWins">
+    <div class="container-fluid">
+<div class="row">
+  <div class="col-xs-4 player">
+    <p class="">
+      Player 
+    </p>
+    <p>{{X_WINS}}</p>
+  </div>
+  <div class="col-xs-4 player">
+    <p class="">
+      Computer   
+    </p>
+    <p>{{X_WINS}}</p>
+  </div>
+  
+</div>
+    </div>
+  
+  </div>
+</div>
+<button class="restart" (click)="restart()">Restart</button>

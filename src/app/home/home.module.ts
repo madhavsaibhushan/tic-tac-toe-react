@@ -7,6 +7,7 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { MainwrapperComponent } from '../mainwrapper/mainwrapper.component';
 import { Admob } from '@ionic-native/admob/ngx';
+import { AiComponentComponent } from '../ai-component/ai-component.component';
 // import { Admob } from '@ionic-native/admob';
 
 
@@ -19,7 +20,8 @@ import { Admob } from '@ionic-native/admob/ngx';
   ],
   providers:[Admob],
   declarations: [HomePage,
-    MainwrapperComponent
+    MainwrapperComponent,
+    AiComponentComponent
   ]
   
 })
